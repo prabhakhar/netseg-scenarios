@@ -1,0 +1,13 @@
+---
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+metadata:
+  name: label-ingress-policy
+spec:
+  endpointSelector:
+    matchLabels:
+      applicationinstance.tess.io/name: deathstarai
+  ingress:
+    - fromEndpoints:
+        - matchLabels:
+            applicationinstance.tess.io/name: tiefighter

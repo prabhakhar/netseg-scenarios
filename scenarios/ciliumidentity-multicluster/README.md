@@ -31,8 +31,15 @@
 
 #### Notes:
 
-    1. I am using four security labels. If I remove one, cilium ends up creating a new one for the endpoint.
-    2. ciliummesh-apiserver is not running.
+    1. I am using four security labels. 
+       
+         k8s:applicationinstance.tess.io/name
+         k8s:io.cilium.k8s.policy.cluster
+         k8s:io.cilium.k8s.policy.serviceaccount
+         k8s:io.kubernetes.pod.namespace
+       
+       If I remove any one of these, cilium ends up creating a new one for the endpoint.
+    2. clustermesh-apiserver is not running.
 
 ## Questions
 
